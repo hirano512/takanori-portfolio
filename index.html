@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>平野孝典 | EC運営 × AI業務改善 ポートフォリオ</title>
+<meta name="description" content="EC販促デザイン・店舗運用・AIによる業務改善のポートフォリオ。カテゴリ登録30分→1分、メルマガ作成60分→18分など、現場の課題を再現可能な仕組みに変えた実績を紹介します。">
+<meta property="og:title" content="平野孝典 | EC運営 × AI業務改善 ポートフォリオ">
+<meta property="og:description" content="現場の課題を見つけ、業務を分解し、AIやツールで再現可能な仕組みに変えます。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/hero-dodgers.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>">
+<style>
+  :root{
+    --ink:#1b2431; --gray:#6b7684; --accent:#1e5fa8; --accent-soft:#eef3f9;
+    --green:#0b8f5a; --line:#e4e9ef; --card:#f7f9fb; --max:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:72px;}
+  body{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;color:var(--ink);background:#fff;line-height:1.8;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
+  section{padding:72px 0;}
+  .kicker{font-size:12px;letter-spacing:.25em;color:var(--accent);font-weight:700;margin-bottom:10px;}
+  h2{font-size:clamp(22px,3.4vw,30px);font-weight:800;letter-spacing:.04em;margin-bottom:10px;}
+  .lead{color:var(--gray);font-size:15px;max-width:640px;margin-bottom:36px;}
+
+  /* ---------- header ---------- */
+  header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:60px;}
+  .nav .logo{font-weight:800;letter-spacing:.06em;font-size:15px;}
+  .nav .logo span{color:var(--accent);}
+  .nav ul{display:flex;gap:22px;list-style:none;font-size:13px;font-weight:600;}
+  .nav a:hover{color:var(--accent);}
+  @media(max-width:760px){.nav ul{display:none;}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:84px 0 64px;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;}}
+  .hero .tag{font-size:12px;letter-spacing:.3em;color:var(--accent);font-weight:700;}
+  .hero h1{font-size:clamp(28px,4.6vw,42px);font-weight:800;line-height:1.35;margin:14px 0 12px;}
+  .hero h1 em{font-style:normal;color:var(--accent);}
+  .hero .name{font-size:15px;font-weight:700;margin-bottom:4px;}
+  .hero .role{font-size:13px;color:var(--gray);margin-bottom:26px;}
+  .hero-img{border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 18px 40px -20px rgba(27,36,49,.25);}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px;}
+  @media(max-width:560px){.stats{grid-template-columns:1fr;}}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;}
+  .stat .label{font-size:11.5px;font-weight:700;color:var(--gray);margin-bottom:4px;}
+  .stat .nums{display:flex;align-items:baseline;gap:8px;line-height:1.2;white-space:nowrap;}
+  .stat .before{font-size:19px;font-weight:700;color:#8b95a1;}
+  .stat .arrow{color:#aab3bd;}
+  .stat .after{font-size:26px;font-weight:800;color:var(--green);}
+  .stat .unit{font-size:12px;color:var(--gray);}
+  .cta-row{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap;}
+  .btn{display:inline-block;padding:12px 26px;border-radius:999px;font-size:14px;font-weight:700;transition:.2s;}
+  .btn-primary{background:var(--accent);color:#fff;}
+  .btn-primary:hover{opacity:.85;}
+  .btn-ghost{border:1.5px solid var(--line);color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  /* ---------- capabilities ---------- */
+  .cap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  @media(max-width:900px){.cap-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.cap-grid{grid-template-columns:1fr;}}
+  .cap{border:1px solid var(--line);border-radius:12px;padding:20px;background:#fff;transition:.2s;}
+  .cap:hover{transform:translateY(-3px);box-shadow:0 12px 28px -18px rgba(27,36,49,.3);}
+  .cap.hl{background:var(--accent-soft);border-color:#cfe0f2;}
+  .cap b{display:block;font-size:15px;margin-bottom:6px;}
+  .cap p{font-size:12.5px;color:var(--gray);line-height:1.7;}
+
+  /* ---------- case studies ---------- */
+  .cases{background:var(--card);}
+  .case{background:#fff;border:1px solid var(--line);border-radius:16px;padding:34px;margin-bottom:26px;}
+  @media(max-width:640px){.case{padding:22px;}}
+  .case-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px;}
+  .case-no{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.15em;background:var(--accent-soft);border-radius:999px;padding:4px 14px;}
+  .case h3{font-size:clamp(17px,2.6vw,21px);font-weight:800;}
+  .case-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
+  @media(max-width:820px){.case-grid{grid-template-columns:1fr;}}
+  .kv{display:grid;grid-template-columns:64px 1fr;gap:10px 14px;font-size:14px;}
+  .kv dt{font-weight:800;color:var(--accent);font-size:13px;padding-top:2px;}
+  .kv dd b{color:var(--green);}
+  .case-stats{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;}
+  .case-stats .stat{flex:1;min-width:180px;}
+  .shots{display:grid;gap:12px;}
+  .shots.three{grid-template-columns:repeat(3,1fr);}
+  @media(max-width:560px){.shots.three{grid-template-columns:1fr;}}
+  .shot{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:8px;cursor:zoom-in;}
+  .shot img{border-radius:6px;width:100%;object-fit:contain;}
+  .shot figcaption{font-size:11.5px;color:var(--gray);padding:8px 4px 2px;line-height:1.6;}
+
+  /* ---------- gallery ---------- */
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px;}
+  .tab{border:1.5px solid var(--line);border-radius:999px;padding:7px 18px;font-size:13px;font-weight:700;cursor:pointer;background:#fff;color:var(--gray);transition:.2s;}
+  .tab.active,.tab:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);}
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  @media(max-width:820px){.gal{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.gal{grid-template-columns:1fr;}}
+  .item{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;cursor:zoom-in;transition:.2s;}
+  .item:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(27,36,49,.3);}
+  .item .thumb{aspect-ratio:1/1;background:var(--card);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .item .thumb.wide{aspect-ratio:16/7;}
+  .item .thumb img{width:100%;height:100%;object-fit:cover;}
+  .item .thumb.fit img{object-fit:contain;padding:10px;}
+  .item .meta{padding:12px 14px;}
+  .item .meta .cat{font-size:10.5px;font-weight:800;color:var(--accent);letter-spacing:.08em;}
+  .item .meta b{display:block;font-size:13.5px;margin:2px 0;}
+  .item .meta p{font-size:11.5px;color:var(--gray);line-height:1.6;}
+  .item.hide{display:none;}
+
+  /* ---------- before/after ---------- */
+  .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  @media(max-width:820px){.ba-grid{grid-template-columns:1fr;}}
+  .ba{border:1px solid var(--line);border-radius:14px;padding:18px;background:#fff;}
+  .ba .pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
+  .ba .lab{font-size:10.5px;font-weight:800;letter-spacing:.14em;color:#9aa4af;margin-bottom:5px;}
+  .ba .lab.a{color:var(--green);}
+  .ba .pimg{aspect-ratio:1/1;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);cursor:zoom-in;}
+  .ba .pimg img{width:100%;height:100%;object-fit:cover;}
+  .ba b{font-size:14px;}
+  .ba p{font-size:12.5px;color:var(--gray);}
+
+  /* ---------- process / profile ---------- */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:56px;}
+  @media(max-width:820px){.steps{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.steps{grid-template-columns:1fr;}}
+  .stepc{background:var(--accent-soft);border-radius:12px;padding:20px;}
+  .stepc .no{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.14em;}
+  .stepc b{display:block;font-size:15px;margin:6px 0 6px;}
+  .stepc p{font-size:12.5px;color:var(--gray);line-height:1.7;}
+  .prof-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  @media(max-width:820px){.prof-grid{grid-template-columns:1fr;}}
+  .timeline{list-style:none;font-size:14px;}
+  .timeline li{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line);}
+  .timeline .yr{font-weight:800;color:var(--accent);font-size:13px;}
+  .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+  .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:12px;font-weight:600;color:var(--gray);}
+  .stance{background:var(--accent-soft);border-radius:14px;padding:26px 30px;margin-top:40px;}
+  .stance .t{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.14em;margin-bottom:8px;}
+  .stance p{font-size:15px;line-height:2;}
+
+  /* ---------- contact / footer ---------- */
+  .contact{background:var(--ink);color:#fff;text-align:center;}
+  .contact h2{color:#fff;}
+  .contact .lead{color:#b8c2cd;margin:0 auto 30px;}
+  .contact .btn-primary{background:#fff;color:var(--ink);}
+  footer{background:var(--ink);color:#8b95a1;text-align:center;font-size:12px;padding:26px 0 34px;border-top:1px solid rgba(255,255,255,.08);}
+
+  /* ---------- lightbox ---------- */
+  .lb{position:fixed;inset:0;background:rgba(15,20,28,.9);display:none;align-items:center;justify-content:center;z-index:200;padding:4vmin;cursor:zoom-out;}
+  .lb.open{display:flex;}
+  .lb figure{max-width:min(1100px,94vw);max-height:92vh;display:flex;flex-direction:column;gap:10px;}
+  .lb img{max-width:100%;max-height:82vh;object-fit:contain;border-radius:8px;background:#fff;}
+  .lb figcaption{color:#cfd6dd;font-size:13px;text-align:center;}
+
+  /* ---------- reveal ---------- */
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+  .rv.on{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">HIRANO <span>TAKANORI</span></a>
+    <ul>
+      <li><a href="#skills">できること</a></li>
+      <li><a href="#cases">業務改善</a></li>
+      <li><a href="#works">制作実績</a></li>
+      <li><a href="#ba">Before/After</a></li>
+      <li><a href="#profile">プロフィール</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="tag">PORTFOLIO — EC OPERATIONS × AI</div>
+      <h1>現場の課題を、<br><em>再現できる仕組み</em>に変える。</h1>
+      <div class="name">平野 孝典</div>
+      <div class="role">EC販促デザイン × 店舗運用 × AI業務改善（楽天市場・スポーツ/アパレル 4年）</div>
+      <div class="stats">
+        <div class="stat"><div class="label">カテゴリ登録作業</div><div class="nums"><span class="before">30分</span><span class="arrow">→</span><span class="after">1分</span></div></div>
+        <div class="stat"><div class="label">メルマガ作成時間</div><div class="nums"><span class="before">60分</span><span class="arrow">→</span><span class="after">18分</span></div></div>
+        <div class="stat"><div class="label">カテゴリデータ自動取得</div><div class="nums"><span class="after">4,144</span><span class="unit">件</span></div></div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#cases">業務改善の実績を見る</a>
+        <a class="btn btn-ghost" href="#works">制作実績を見る</a>
+      </div>
+    </div>
+    <div class="hero-img rv"><img src="assets/img/hero-dodgers.jpg" alt="代表作：MLB特集のコンテンツ画像" width="1200" height="900"></div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <div class="wrap">
+    <div class="kicker">01 — WHAT I DO</div>
+    <h2>できること</h2>
+    <p class="lead">制作と運用改善をまとめて進められます。作って終わりではなく、売場の更新・確認・改善まで一気通貫で対応します。</p>
+    <div class="cap-grid">
+      <div class="cap rv"><b>商品画像・説明画像</b><p>カラー・機能・サイズ感の訴求画像、購入前の不安を解消する説明画像</p></div>
+      <div class="cap rv"><b>特集・ブランドバナー</b><p>季節/キャンペーン/ブランド世界観に合わせた売場の入口づくり</p></div>
+      <div class="cap rv"><b>メルマガ・LINE配信</b><p>商品選定から制作・配信まで。競合分析に基づく改善提案も可能</p></div>
+      <div class="cap rv"><b>セール運用・公開前確認</b><p>在庫・価格・重複のチェック体制づくりでミスを未然に防止</p></div>
+      <div class="cap hl rv"><b>AIによる業務効率化</b><p>カテゴリ登録30分→1分、メルマガ60分→18分など実績のある時短ノウハウ</p></div>
+      <div class="cap hl rv"><b>業務の仕組み化・引き継ぎ</b><p>手順のマニュアル化・チェックリスト化で属人化を解消し、チームに残す</p></div>
+      <div class="cap rv"><b>HTML / CSS・データ処理</b><p>ページ更新・軽微修正、Excel/CSVでの商品データ整理・一括処理</p></div>
+      <div class="cap rv"><b>品質管理・再発防止</b><p>ミスの原因分析からルール更新まで。印刷業8年で培った品質意識</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CASE STUDIES ================= -->
+<section class="cases" id="cases">
+  <div class="wrap">
+    <div class="kicker">02 — CASE STUDY</div>
+    <h2>業務改善ケーススタディ</h2>
+    <p class="lead">AIを「使いっぱなし」にせず、課題の分解からツール化・品質管理・再発防止までを業務フローとして設計した3つの事例です。</p>
+
+    <!-- case 1 -->
+    <article class="case rv">
+      <div class="case-head"><span class="case-no">CASE 01</span><h3>商品カテゴリ登録の自動化 — 30分の手作業を1分に</h3></div>
+      <div class="case-grid">
+        <div>
+          <dl class="kv">
+            <dt>課題</dt><dd>商品ごとのカテゴリ登録が手作業で1回30分。判断基準が属人化し、人によって分類がブレていた。</dd>
+            <dt>取り組み</dt><dd>ブランドごとの分類ルールをExcelマスタとして整備し、商品情報からカテゴリを自動判定。登録用CSVまで一気通貫で出力するツールを自作。入力チェックと処理後の自動採点・修正ループも組み込んだ。</dd>
+            <dt>成果</dt><dd>作業時間<b> 30分 → 1分</b>。基準が「ツールとマスタ」に残るため、誰が使っても同じ品質で登録できる。</dd>
+          </dl>
+          <div class="case-stats">
+            <div class="stat"><div class="label">カテゴリ登録 1回あたり</div><div class="nums"><span class="before">30分</span><span class="arrow">→</span><span class="after">1分</span></div></div>
+            <div class="stat"><div class="label">RMSカテゴリ情報の自動取得</div><div class="nums"><span class="after">4,144</span><span class="unit">件・複数店舗一括</span></div></div>
+          </div>
+        </div>
+        <div class="shots">
+          <figure class="shot" data-full="assets/img/tool-category.jpg" data-cap="自作ツール「カテゴリ自動割り振り v2.0」。商品Excelを読み込み、判定からExcel / CSV出力までワンクリック。">
+            <img src="assets/img/tool-category.jpg" alt="楽天RMSカテゴリ自動割り振りツールの画面" loading="lazy">
+            <figcaption>自作ツール「カテゴリ自動割り振り v2.0」— 商品Excelを読み込み、判定からCSV出力までワンクリック。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+    <!-- case 2 -->
+    <article class="case rv">
+      <div class="case-head"><span class="case-no">CASE 02</span><h3>セールページ公開前チェックの一括化 — 目視確認を仕組みに</h3></div>
+      <dl class="kv" style="margin-bottom:22px;">
+        <dt>課題</dt><dd>セールページは掲載点数が多く、売り切れ・重複掲載・価格不一致の目視確認に時間がかかり、見落としのリスクが常にあった。</dd>
+        <dt>取り組み</dt><dd>ページ内の商品情報を読み取り、在庫なし・重複・価格未設定を一括判定するチェッカーを自作。問題箇所は売場上に色付きで可視化し、その場で直せるようにした。</dd>
+        <dt>成果</dt><dd>公開前チェックの精度向上と確認漏れ防止。<b>お客様の信頼を損なうミスを公開前に止める</b>体制を、誰でも同じ基準で回せる形にした。</dd>
+      </dl>
+      <div class="shots three">
+        <figure class="shot" data-full="assets/img/tool-salechecker.jpg" data-cap="セールチェッカー — 総商品数・在庫なし・重複・価格なしを品番つきで一括レポート。">
+          <img src="assets/img/tool-salechecker.jpg" alt="セールページの一括チェック結果画面" loading="lazy">
+          <figcaption>セールチェッカー — 在庫なし・重複・価格なしを品番つきで一括レポート。</figcaption>
+        </figure>
+        <figure class="shot" data-full="assets/img/tool-visualize.jpg" data-cap="売場上の可視化 — 問題のある商品カードに価格・重複バッジを直接表示。">
+          <img src="assets/img/tool-visualize.jpg" alt="売場上に価格と重複を可視化した画面" loading="lazy">
+          <figcaption>売場上の可視化 — 問題箇所にバッジを直接表示し、修正箇所が一目でわかる。</figcaption>
+        </figure>
+        <figure class="shot" data-full="assets/img/tool-price.jpg" data-cap="価格チェッカー — SKU別の販売価格を一覧化し、表示価格との不一致を検出。">
+          <img src="assets/img/tool-price.jpg" alt="SKU別の価格チェック画面" loading="lazy">
+          <figcaption>価格チェッカー — SKU別価格を一覧化し、表示価格との不一致を検出。</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- case 3 -->
+    <article class="case rv">
+      <div class="case-head"><span class="case-no">CASE 03</span><h3>メルマガ制作とAI活用の品質管理 — 60分を18分に</h3></div>
+      <div class="case-grid">
+        <div>
+          <dl class="kv">
+            <dt>課題</dt><dd>メルマガの商品選定・制作に毎回時間がかかる。またAIが生成する商品訴求文には、素材混率などの誤情報が混ざるリスクがある。</dd>
+            <dt>取り組み</dt><dd>セール会場からの候補抽出・過去掲載との重複除外・在庫確認・Excel出力までをワークフロー化し、24品を在庫確認済みで選定。AI出力には「確認できない情報は確定表現で書かない」等のルールと多段チェック体制（景品表示法の観点を含む）を整備した。</dd>
+            <dt>成果</dt><dd>メルマガ作成<b> 60分 → 18分</b>。誤情報の混入を防ぎ、AIを安心して業務に使える運用ルールとして定着。ミスは学習ログに記録し次回の精度向上へ反映。</dd>
+          </dl>
+          <div class="case-stats">
+            <div class="stat"><div class="label">メルマガ作成時間</div><div class="nums"><span class="before">60分</span><span class="arrow">→</span><span class="after">18分</span></div></div>
+            <div class="stat"><div class="label">掲載商品の自動選定</div><div class="nums"><span class="after">24</span><span class="unit">品を在庫確認済みで選定</span></div></div>
+          </div>
+        </div>
+        <div class="shots">
+          <figure class="shot" data-full="assets/img/tool-ai-analysis.jpg" data-cap="AIによるバナー分析 — 作成したバナーの訴求・視認性・改善点をレポート化し、次の制作に反映。">
+            <img src="assets/img/tool-ai-analysis.jpg" alt="AIによるバナーデザイン分析レポート" loading="lazy">
+            <figcaption>AIによるバナー分析 — 訴求・視認性・改善点をレポート化し、次の制作に反映。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= WORKS GALLERY ================= -->
+<section id="works">
+  <div class="wrap">
+    <div class="kicker">03 — CREATIVE WORKS</div>
+    <h2>制作実績</h2>
+    <p class="lead">「誰に・何を・なぜ今」を1枚に整理する制作を心がけています。タグで絞り込み、クリックで拡大できます。</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-f="all">すべて</button>
+      <button class="tab" data-f="feature">特集・キャンペーン</button>
+      <button class="tab" data-f="brand">ブランド</button>
+      <button class="tab" data-f="product">商品画像</button>
+      <button class="tab" data-f="nav">導線パーツ</button>
+    </div>
+
+    <div class="gal">
+      <figure class="item rv" data-cat="feature" data-full="assets/img/hero-dodgers.jpg" data-cap="MLBチーム特集 コンテンツ画像。チームカラーを背景に、売場の入口として目を引く構成。">
+        <div class="thumb"><img src="assets/img/hero-dodgers.jpg" alt="MLBドジャース特集のコンテンツ画像" loading="lazy"></div>
+        <div class="meta"><span class="cat">特集・キャンペーン</span><b>MLBチーム特集（1）</b><p>ユニフォーム＋キャップでチームの世界観を表現。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="feature" data-full="assets/img/feature-yankees.jpg" data-cap="MLBチーム特集 コンテンツ画像。フォーマット化により別チームにも同品質で横展開。">
+        <div class="thumb"><img src="assets/img/feature-yankees.jpg" alt="MLBヤンキース特集のコンテンツ画像" loading="lazy"></div>
+        <div class="meta"><span class="cat">特集・キャンペーン</span><b>MLBチーム特集（2）</b><p>フォーマット化で別チームにも同品質で横展開できる作り。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="feature" data-full="assets/img/feature-undershirt.jpg" data-cap="アンダーシャツ特集バナー。使用シーン訴求＋取扱ブランドのロゴ帯で品揃えの広さを提示。">
+        <div class="thumb"><img src="assets/img/feature-undershirt.jpg" alt="アンダーシャツ特集バナー" loading="lazy"></div>
+        <div class="meta"><span class="cat">特集・キャンペーン</span><b>アンダーシャツ特集</b><p>「オールシーズン活躍」の使用シーン訴求＋ブランドロゴ帯。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="feature" data-full="assets/img/feature-bat.jpg" data-cap="バット特集バナー。商品を主役にした斜めレイアウトで動きを演出。">
+        <div class="thumb"><img src="assets/img/feature-bat.jpg" alt="バット特集バナー" loading="lazy"></div>
+        <div class="meta"><span class="cat">特集・キャンペーン</span><b>バット特集</b><p>「最新モデル続々入荷中」で今見る理由を作る。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="feature" data-full="assets/img/feature-mlb.jpg" data-cap="MLB ITEM LINEUP特集。多数のユニフォームを整列させ、球場イラスト背景でお祭り感を演出。">
+        <div class="thumb"><img src="assets/img/feature-mlb.jpg" alt="MLBアイテム特集バナー" loading="lazy"></div>
+        <div class="meta"><span class="cat">特集・キャンペーン</span><b>MLB ITEM LINEUP</b><p>品揃え訴求型。球場背景でお祭り感を演出。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="brand" data-full="assets/img/brand-ua1.jpg" data-cap="スポーツブランドバナー。モノクロのトレーニングシーンでストイックな世界観を表現。">
+        <div class="thumb"><img src="assets/img/brand-ua1.jpg" alt="トレーニングブランドバナー（モノクロ）" loading="lazy"></div>
+        <div class="meta"><span class="cat">ブランド</span><b>スポーツブランド バナー（1）</b><p>モノクロでブランドのストイックな世界観を表現。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="brand" data-full="assets/img/brand-ua2.jpg" data-cap="スポーツブランドバナー。着用カットを3分割で組み、アイテムの幅を1枚で見せる。">
+        <div class="thumb"><img src="assets/img/brand-ua2.jpg" alt="トレーニングブランドバナー（着用カット）" loading="lazy"></div>
+        <div class="meta"><span class="cat">ブランド</span><b>スポーツブランド バナー（2）</b><p>着用カット3分割でアイテムの幅を1枚に。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="brand" data-full="assets/img/brand-yonex.jpg" data-cap="ラケットスポーツブランドバナー。ブランドカラーの帯＋商品写真、LINEUPボタンで導線を明示。">
+        <div class="thumb"><img src="assets/img/brand-yonex.jpg" alt="ラケットスポーツブランドバナー" loading="lazy"></div>
+        <div class="meta"><span class="cat">ブランド</span><b>ラケットスポーツ バナー</b><p>ブランドカラー帯＋商品写真＋一覧への導線。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="product" data-full="assets/img/product-heatgear.jpg" data-cap="機能・カラー訴求の商品画像。機能名＋着用カット＋15色展開を1枚に集約。">
+        <div class="thumb"><img src="assets/img/product-heatgear.jpg" alt="機能・カラー訴求の商品画像" loading="lazy"></div>
+        <div class="meta"><span class="cat">商品画像</span><b>機能・カラー訴求</b><p>機能名＋着用カット＋15色展開を1枚に集約。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="product" data-full="assets/img/product-socks.jpg" data-cap="ソックス訴求画像。サイズ・機能タグを載せ、履用シーンでフィット感を表現。">
+        <div class="thumb"><img src="assets/img/product-socks.jpg" alt="ソックスの訴求画像" loading="lazy"></div>
+        <div class="meta"><span class="cat">商品画像</span><b>ソックス訴求</b><p>サイズ・機能タグ＋履用シーンでフィット感を表現。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="product" data-full="assets/img/product-shorts.jpg" data-cap="ランニングショーツの訴求画像。男女着用＋商品単体で使用イメージと形を両立。">
+        <div class="thumb"><img src="assets/img/product-shorts.jpg" alt="ランニングショーツの訴求画像" loading="lazy"></div>
+        <div class="meta"><span class="cat">商品画像</span><b>ショーツ訴求</b><p>男女着用＋商品単体で使用イメージと形を両立。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="product" data-full="assets/img/product-colors.jpg" data-cap="カラーバリエーション画像。色選びで迷わせない一覧型の見せ方。">
+        <div class="thumb"><img src="assets/img/product-colors.jpg" alt="カラーバリエーション画像" loading="lazy"></div>
+        <div class="meta"><span class="cat">商品画像</span><b>カラーバリエーション</b><p>色選びで迷わせない一覧型の見せ方。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="product" data-full="assets/img/product-model.jpg" data-cap="着用イメージ画像。置き画では伝わらないサイズ感・雰囲気を補強。">
+        <div class="thumb"><img src="assets/img/product-model.jpg" alt="着用イメージ画像" loading="lazy"></div>
+        <div class="meta"><span class="cat">商品画像</span><b>着用イメージ</b><p>置き画では伝わらないサイズ感・雰囲気を補強。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="product" data-full="assets/img/desc-product.jpg" data-cap="商品説明画像。素材・機能を着用シーンとあわせて説明し、購入前の不安を解消。">
+        <div class="thumb"><img src="assets/img/desc-product.jpg" alt="素材機能を説明する商品説明画像" loading="lazy"></div>
+        <div class="meta"><span class="cat">商品画像</span><b>商品説明画像</b><p>素材・機能を着用シーンとあわせて説明。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="brand" data-full="assets/img/desc-brand.jpg" data-cap="ブランド説明画像。ブランドの背景・特長を整理し信頼感を補強。">
+        <div class="thumb"><img src="assets/img/desc-brand.jpg" alt="ブランド説明画像" loading="lazy"></div>
+        <div class="meta"><span class="cat">ブランド</span><b>ブランド説明画像</b><p>背景・特長を整理し信頼感を補強。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="nav" data-full="assets/img/nav-kaiyu.jpg" data-cap="回遊バナー。関連カテゴリへ誘導し、ついで買いの動線を作る。">
+        <div class="thumb"><img src="assets/img/nav-kaiyu.jpg" alt="店舗内回遊バナー" loading="lazy"></div>
+        <div class="meta"><span class="cat">導線パーツ</span><b>回遊バナー</b><p>関連カテゴリへ誘導し、ついで買いの動線を作る。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="nav" data-full="assets/img/btn-ladys.jpg" data-cap="レディース導線ボタン。性別・年齢別に探しやすくするUIパーツ。">
+        <div class="thumb wide fit"><img src="assets/img/btn-ladys.jpg" alt="レディース導線ボタン" loading="lazy"></div>
+        <div class="meta"><span class="cat">導線パーツ</span><b>導線ボタン（レディース）</b><p>性別・年齢別に探しやすくするUI。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="nav" data-full="assets/img/btn-mens.jpg" data-cap="メンズ導線ボタン。">
+        <div class="thumb wide fit"><img src="assets/img/btn-mens.jpg" alt="メンズ導線ボタン" loading="lazy"></div>
+        <div class="meta"><span class="cat">導線パーツ</span><b>導線ボタン（メンズ）</b><p>色でカテゴリを直感的に区別。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="nav" data-full="assets/img/btn-kids.jpg" data-cap="キッズ導線ボタン。">
+        <div class="thumb wide fit"><img src="assets/img/btn-kids.jpg" alt="キッズ導線ボタン" loading="lazy"></div>
+        <div class="meta"><span class="cat">導線パーツ</span><b>導線ボタン（キッズ）</b><p>統一フォーマットで店舗全体に展開。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="nav" data-full="assets/img/band-1.jpg" data-cap="店舗ヘッダー用ブランド帯バナー。">
+        <div class="thumb wide fit"><img src="assets/img/band-1.jpg" alt="店舗用ブランド帯バナー1" loading="lazy"></div>
+        <div class="meta"><span class="cat">導線パーツ</span><b>ブランド帯バナー（1）</b><p>店舗ヘッダーでブランドページへ誘導。</p></div>
+      </figure>
+      <figure class="item rv" data-cat="nav" data-full="assets/img/band-2.jpg" data-cap="店舗ヘッダー用ブランド帯バナー。">
+        <div class="thumb wide fit"><img src="assets/img/band-2.jpg" alt="店舗用ブランド帯バナー2" loading="lazy"></div>
+        <div class="meta"><span class="cat">導線パーツ</span><b>ブランド帯バナー（2）</b><p>ロゴを活かしたシンプルな帯フォーマット。</p></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BEFORE / AFTER ================= -->
+<section id="ba" style="background:var(--card);">
+  <div class="wrap">
+    <div class="kicker">04 — IMPROVEMENT</div>
+    <h2>画像修正 Before / After</h2>
+    <p class="lead">「載せる」から「売れる見せ方」へ。既存画像の課題を見つけて作り直した事例です。画像はクリックで拡大できます。</p>
+    <div class="ba-grid">
+      <div class="ba rv">
+        <div class="pair">
+          <div><div class="lab">BEFORE</div><div class="pimg" data-full="assets/img/ba1-before.jpg" data-cap="修正前：色数の羅列になっていた集合画像"><img src="assets/img/ba1-before.jpg" alt="修正前：キャップの集合画像" loading="lazy"></div></div>
+          <div><div class="lab a">AFTER</div><div class="pimg" data-full="assets/img/ba1-after.jpg" data-cap="修正後：着用イメージ主体の構成に変更"><img src="assets/img/ba1-after.jpg" alt="修正後：着用モデルを主役にした画像" loading="lazy"></div></div>
+        </div>
+        <b>商品集合画像の見せ方調整</b>
+        <p>色数の羅列から、着用イメージ主体の構成へ。かぶった姿が想像できる1枚に。</p>
+      </div>
+      <div class="ba rv">
+        <div class="pair">
+          <div><div class="lab">BEFORE</div><div class="pimg" data-full="assets/img/ba2-before.jpg" data-cap="修正前：置き画中心の商品画像"><img src="assets/img/ba2-before.jpg" alt="修正前：シューズの置き画" loading="lazy"></div></div>
+          <div><div class="lab a">AFTER</div><div class="pimg" data-full="assets/img/ba2-after.jpg" data-cap="修正後：着用シーンで使用イメージを訴求"><img src="assets/img/ba2-after.jpg" alt="修正後：着用シーンの画像" loading="lazy"></div></div>
+        </div>
+        <b>置き画から着用シーンへ</b>
+        <p>使用シーンを見せることで、履いた時のイメージとサイズ感を伝える。</p>
+      </div>
+      <div class="ba rv">
+        <div class="pair">
+          <div><div class="lab">BEFORE</div><div class="pimg" data-full="assets/img/ba3-before.jpg" data-cap="修正前：白背景のシューズ画像"><img src="assets/img/ba3-before.jpg" alt="修正前：白背景のシューズ画像" loading="lazy"></div></div>
+          <div><div class="lab a">AFTER</div><div class="pimg" data-full="assets/img/ba3-after.jpg" data-cap="修正後：AI生成背景で使用シーンの空気感を追加"><img src="assets/img/ba3-after.jpg" alt="修正後：AI生成背景を追加した画像" loading="lazy"></div></div>
+        </div>
+        <b>AI生成背景で雰囲気づくり</b>
+        <p>撮影なしで使用シーンの空気感を追加。制作コストを抑えて訴求力を上げる。</p>
+      </div>
+      <div class="ba rv">
+        <div class="pair">
+          <div><div class="lab">BEFORE</div><div class="pimg" data-full="assets/img/ba4-before.jpg" data-cap="修正前：文字情報のないショーツ画像"><img src="assets/img/ba4-before.jpg" alt="修正前：文字情報のないショーツ画像" loading="lazy"></div></div>
+          <div><div class="lab a">AFTER</div><div class="pimg" data-full="assets/img/ba4-after.jpg" data-cap="修正後：機能訴求の文字（吸汗速乾）を追加"><img src="assets/img/ba4-after.jpg" alt="修正後：機能訴求の文字を追加した画像" loading="lazy"></div></div>
+        </div>
+        <b>文字情報で訴求補強</b>
+        <p>見た目だけでは伝わらない機能（吸汗速乾）をコピーで補い、選ぶ理由を明確に。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROFILE ================= -->
+<section id="profile">
+  <div class="wrap">
+    <div class="kicker">05 — PROFILE</div>
+    <h2>仕事の進め方・プロフィール</h2>
+    <p class="lead">課題を「仕組み」に変える4ステップで、一度きりの改善で終わらせない働き方をしています。</p>
+
+    <div class="steps">
+      <div class="stepc rv"><span class="no">STEP 1</span><b>課題を見つける</b><p>時間がかかる・ミスが出る・属人化している工程を日々の作業から発見</p></div>
+      <div class="stepc rv"><span class="no">STEP 2</span><b>業務を分解する</b><p>「よろしく」で済まされる作業を、判断・確認・修正・出力の工程に分解</p></div>
+      <div class="stepc rv"><span class="no">STEP 3</span><b>仕組みに変える</b><p>ツール・CSV・チェックリスト・マニュアルなど再利用できる形へ</p></div>
+      <div class="stepc rv"><span class="no">STEP 4</span><b>改善を続ける</b><p>ミスの原因を記録し、ルール更新と再発防止に反映</p></div>
+    </div>
+
+    <div class="prof-grid">
+      <div>
+        <h3 style="font-size:17px;margin-bottom:10px;">経歴</h3>
+        <ul class="timeline">
+          <li><span class="yr">〜2021</span><span>印刷業 約8年。オペレーター業務のかたわら、現場改善提案「作業の見える化」を実施し社内で高評価。</span></li>
+          <li><span class="yr">2021-2022</span><span>職業訓練校 WEBデザイナー科 修了。デザイン・コーディングを学び直し。</span></li>
+          <li><span class="yr">2022〜現在</span><span>楽天市場のスポーツ・アパレル用品店舗のEC運営に4年従事。制作・運用・改善を担当し、1年で担当店舗の運用を習得。</span></li>
+          <li><span class="yr">資格</span><span>カラーコーディネーター（東京商工会議所）</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:17px;margin-bottom:10px;">使用ツール</h3>
+        <div class="chip-row">
+          <span class="chip">Photoshop</span><span class="chip">Illustrator</span><span class="chip">HTML / CSS</span>
+          <span class="chip">JavaScript</span><span class="chip">Python</span><span class="chip">Excel / CSV</span>
+          <span class="chip">楽天RMS</span><span class="chip">ChatGPT</span><span class="chip">Claude Code</span>
+        </div>
+        <div class="stance">
+          <div class="t">仕事への姿勢</div>
+          <p>作業をこなすだけで終わらせず、「なぜ時間がかかるのか」「どこで止まるのか」「どうすれば次から楽になるのか」を考えます。改善はツール・マニュアル・チェックリストとしてチームに残すことを大切にしています。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="kicker" style="color:#7fa8d9;">06 — CONTACT</div>
+    <h2>お問い合わせ</h2>
+    <p class="lead">ポートフォリオをご覧いただきありがとうございます。<br>ご連絡は応募書類・各求人媒体のメッセージ機能よりお願いいたします。</p>
+    <a class="btn btn-primary" href="#top">トップに戻る</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Hirano Takanori — EC運営の現場感を持ち、デザイン・運用・確認・改善まで対応します。</div>
+</footer>
+
+<!-- lightbox -->
+<div class="lb" id="lb" aria-hidden="true">
+  <figure><img id="lb-img" src="" alt=""><figcaption id="lb-cap"></figcaption></figure>
+</div>
+
+<script>
+// ---- gallery filter ----
+const tabs = document.querySelectorAll('.tab');
+const items = document.querySelectorAll('.gal .item');
+tabs.forEach(t => t.addEventListener('click', () => {
+  tabs.forEach(x => x.classList.remove('active'));
+  t.classList.add('active');
+  const f = t.dataset.f;
+  items.forEach(it => it.classList.toggle('hide', f !== 'all' && it.dataset.cat !== f));
+}));
+
+// ---- lightbox ----
+const lb = document.getElementById('lb');
+const lbImg = document.getElementById('lb-img');
+const lbCap = document.getElementById('lb-cap');
+document.querySelectorAll('[data-full]').forEach(el => {
+  el.addEventListener('click', () => {
+    lbImg.src = el.dataset.full;
+    lbImg.alt = el.dataset.cap || '';
+    lbCap.textContent = el.dataset.cap || '';
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+  });
+});
+lb.addEventListener('click', () => { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); lbImg.src = ''; });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.click(); });
+
+// ---- scroll reveal ----
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+}), { threshold: .12 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
